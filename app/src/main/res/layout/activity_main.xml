@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,4 +10,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.xcode.tipscalculator.MainActivity">
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/billAmount"
+        android:id="@+id/tvBillAmount"
+        android:layout_row="1"
+        android:layout_column="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tipPercent"
+        android:id="@+id/tvTipPercent"
+        android:layout_row="3"
+        android:layout_column="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tipAmount"
+        android:id="@+id/tvTipAmount"
+        android:layout_row="5"
+        android:layout_column="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/grandTotal"
+        android:id="@+id/tvGrandTotal"
+        android:layout_row="7"
+        android:layout_column="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/splitAmong"
+        android:id="@+id/tvsplitAmong"
+        android:layout_row="9"
+        android:layout_column="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amountPer"
+        android:id="@+id/tvAmountPer"
+        android:layout_row="11"
+        android:layout_column="0"/>
+
+</GridLayout>

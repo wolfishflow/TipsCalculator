@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TipsCalculator</string>
+    <string name="tipAmount">Tip Amount</string>
+    <string name="tipPercent">Tip Percent</string>
+    <string name="billAmount">Bill Amount</string>
+    <string name="grandTotal">Grand Total</string>
+    <string name="splitAmong">Split Among</string>
+    <string name="amountPer">Amount Per Person</string>
 </resources>
