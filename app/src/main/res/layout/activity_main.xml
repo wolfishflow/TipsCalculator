@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout
+<TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,52 +10,138 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.xcode.tipscalculator.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/billAmount"
-        android:id="@+id/tvBillAmount"
-        android:layout_row="1"
-        android:layout_column="0"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tipPercent"
-        android:id="@+id/tvTipPercent"
-        android:layout_row="3"
-        android:layout_column="0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/billAmount"
+            android:id="@+id/tvBillAmount"
+            android:layout_column="0"
+            android:layout_weight="1"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tipAmount"
-        android:id="@+id/tvTipAmount"
-        android:layout_row="5"
-        android:layout_column="0"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_column="1"
+            android:layout_weight="5"/>
+    </TableRow>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/grandTotal"
-        android:id="@+id/tvGrandTotal"
-        android:layout_row="7"
-        android:layout_column="0"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/splitAmong"
-        android:id="@+id/tvsplitAmong"
-        android:layout_row="9"
-        android:layout_column="0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tipPercent"
+            android:id="@+id/tvTipPercent"
+            android:layout_column="0"
+            android:layout_weight="1"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/amountPer"
-        android:id="@+id/tvAmountPer"
-        android:layout_row="11"
-        android:layout_column="0"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_column="1"
+            android:layout_weight="5"/>
 
-</GridLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tipAmount"
+            android:id="@+id/tvTipAmount"
+            android:layout_column="0"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_column="1"
+            android:layout_weight="5"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grandTotal"
+            android:id="@+id/tvGrandTotal"
+            android:layout_column="0"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editText3"
+            android:layout_column="1"
+            android:layout_weight="5"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splitAmong"
+            android:id="@+id/tvsplitAmong"
+            android:layout_column="0"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:layout_column="1"
+            android:layout_weight="5"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/amountPer"
+            android:id="@+id/tvAmountPer"
+            android:layout_column="0"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:layout_column="1"
+            android:layout_weight="5"/>
+    </TableRow>
+
+</TableLayout>
