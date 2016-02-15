@@ -2,6 +2,7 @@ package com.example.xcode.tipscalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,10 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        clear = (Button) findViewById(R.id.btnClear);
-        calc = (Button) findViewById(R.id.btnCalculate);
-
+        //assign all values to gui
         billAmount = (EditText) findViewById(R.id.etBillAmount);
         tipPercent = (Spinner) findViewById(R.id.spTipPercent);
         tipAmount = (EditText) findViewById(R.id.etTipAmount);
@@ -37,6 +35,34 @@ public class MainActivity extends AppCompatActivity {
         splitAmong = (Spinner) findViewById(R.id.spSplit);
         perPerson = (EditText) findViewById(R.id.etAmountPer);
         amountPerPerson = (TextView) findViewById(R.id.tvAmountPer);
+
+        //Set to false as the user shouldn't touch this
+        grandTotal.setEnabled(false);
+        tipAmount.setEnabled(false);
+        perPerson.setEnabled(false);
+
+    }
+
+    //saves the value for the chance of orientation change
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("value", amountPerPerson.getText().toString());
+    }
+
+
+    //Restores the hidden field if it's supposed to appear, if not remains hidden
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        amountPerPerson.setText(savedInstanceState.getString("value"));
+
+
+        if (grandTotal.getText().length()>0) {
+            perPerson.setVisibility(View.VISIBLE);
+            amountPerPerson.setVisibility(View.VISIBLE);
+        }
 
     }
 
@@ -62,8 +88,9 @@ public class MainActivity extends AppCompatActivity {
                 perPerson.setVisibility(View.VISIBLE);
                 amountPerPerson.setVisibility(View.VISIBLE);
 
-                perPerson.setText(String.valueOf(gtDouble));
+                perPerson.setText(String.valueOf(Math.floor(gtDouble * 100)/100));
             }
+
             grandTotal.setText(String.valueOf(billOrg));
 
         }
@@ -86,4 +113,5 @@ public class MainActivity extends AppCompatActivity {
         tipPercent.setSelection(0);
 
     }
+
 }
