@@ -6,4 +6,18 @@
     <string name="grandTotal">Grand Total</string>
     <string name="splitAmong">Split Among</string>
     <string name="amountPer">Amount Per Person</string>
+    <string name="clear">Clear</string>
+    <string name="calculate">Calculate</string>
+    <string-array name="spPeople">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="spPercent">
+        <item>10%</item>
+        <item>13%</item>
+        <item>15%</item>
+        <item>20%</item>
+    </string-array>
 </resources>
